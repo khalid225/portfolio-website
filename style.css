@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	min-height: 100vh;
+	font-family: "Inter", "Segoe UI", Verdana, Geneva, Tahoma, sans-serif;
+	/* background-color: darkgray; */
+	/* background-image: url("nature-bg.avif"); */
+	/* background-image: linear-gradient(45deg, #1f0203 50%, #090932 33.4%, #042c34 16.7%); */
+	background-image: linear-gradient(to right bottom, #042c34 40%, #0c323a 4%, #042c34 60%);
+	background-image: linear-gradient(45deg, #1f0203 0%, #070725 35%, #042c34 100%);
+	/* background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat; */
+	color: rgb(240, 248, 255);
+}
+
+header {
+	position: relative;
+	/* padding: 0 2rem; */
+}
+
+.menuIcon {
+	display: none;
+}
+
+nav {
+	background-color: transparent;
+	box-shadow: 3px 3px 5px rgba(255, 255, 255, 0.1);
+	display: flex;
+	padding: 0.5rem 0;
+}
+nav ul {
+	width: 100%;
+	list-style: none;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+a {
+	text-decoration: none;
+	padding: 0 30px;
+	color: rgb(240, 248, 255);
+	transition: scale 1.2 ease;
+}
+
+a:hover {
+	color: rgb(255, 165, 0);
+}
+
+.action_btn {
+	background-color: rgb(255, 165, 0);
+	color: #ffffff;
+	border: none;
+	outline: none;
+	border-radius: 20px;
+	font-size: 0.8rem;
+	font-weight: bold;
+	cursor: pointer;
+	transition: scale 0.2 ease;
+}
+.action_btn:hover {
+	color: rgb(240, 248, 255);
+	scale: 1.1;
+}
+
+#closeIcon {
+	position: absolute;
+	margin: 0.5rem 0.5rem 0 0;
+	top: 0;
+	right: 0;
+	width: 1.5rem;
+	height: 1.5rempx;
+}
+
+.dropdown_menu {
+	display: none;
+	position: absolute;
+	top: 2rem;
+	right: 0.8rem;
+	width: 300px;
+	height: 0;
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(15px);
+	border-radius: 10px;
+	overflow: hidden;
+	transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+	height: 240px;
+}
+
+.dropdown_menu li {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.7rem;
+}
+
+/* .dropdown_menu a {
+	width: 100%;
+} */
+
+main {
+	display: flex;
+	justify-content: center;
+	padding: 1rem;
+	width: 100%;
+}
+
+.bio {
+	width: 60%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+.display_pix {
+	margin-top: 2rem;
+	width: 35%;
+	height: 60%;
+}
+.display_pix img {
+	width: 100%;
+	border-radius: 50%;
+}
+
+.skills {
+	width: 100%;
+}
+.skill_title {
+	display: flex;
+	justify-content: center;
+}
+
+.skill__list {
+	display: flex;
+	padding: 2rem 4rem;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 70%;
+	margin: auto;
+}
+
+.skill {
+	min-width: 25%;
+	margin-bottom: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+.skill__img {
+	width: 100%;
+	max-width: 100px;
+	transition: all 300ms;
+	/* padding: 1.5rem 1rem; */
+	box-shadow: 5px 5px 5px 5px rgba(247, 245, 245, 0.1);
+}
+.skill:hover .skill__img {
+	filter: brightness(80%);
+	opacity: 0.86;
+	transform: scale(0.9);
+}
+
+.skill__name {
+	position: absolute;
+	bottom: 0;
+	transform: scale(0);
+	transition: all 300ms;
+	font-size: 20px;
+	opacity: 0;
+}
+.skill:hover .skill__name {
+	transform: scale(1);
+	opacity: 1;
+}
+
+.projects {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 4rem;
+	/* width: 90%; */
+}
+
+figure {
+	width: 200px;
+	height: 200px;
+	border: 1px #cccccc solid;
+	padding: 4px;
+	margin: auto;
+}
+figure img {
+	width: 100%;
+	height: 100%;
+}
+
+figcaption {
+	background-color: black;
+	color: white;
+	font-style: italic;
+	padding: 2px;
+	text-align: center;
+}
+
+figcaption button {
+	cursor: pointer;
+	background-color: aquamarine;
+}
+
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 4rem;
+}
+.socials {
+	display: flex;
+	gap: 1rem;
+	padding-bottom: 10px;
+}
+
+@media (max-width: 678px) {
+	.dropdown_menu {
+		position: fixed;
+		background-color: rgba(255, 255, 255, 0.2);
+		display: grid;
+	}
+
+	.menuIcon {
+		display: block;
+		position: absolute;
+		margin: 0.5rem 0.5rem 0 0;
+		top: 0;
+		right: 0;
+	}
+
+	.links {
+		display: none;
+	}
+	.skill {
+		width: 30%;
+		margin: 1rem;
+		display: flex;
+		justify-content: center;
+		position: relative;
+	}
+	.projects {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		width: 70%;
+		margin: auto;
+		position: relative;
+	}
+}
+
+.hidden {
+	display: none;
+}

@@ -128,7 +128,7 @@ main {
 	width: 100%;
 	position: relative;
 	top: 2.5rem;
-	margin-bottom: 1.5rem;
+	height: 100vh;
 }
 
 .bio {
@@ -136,12 +136,13 @@ main {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-right: 1rem;
+	margin: 1rem;
 }
 .display_pix {
-	padding-top: 2rem;
-	width: 35%;
-	height: 60%;
+	width: 20%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .display_pix img {
 	width: 100%;
@@ -305,6 +306,20 @@ footer {
 		gap: 1rem;
 		padding: 1em;
 	}
+
+	main {
+		flex-direction: column-reverse;
+		justify-content: center;
+		align-items: center;
+		padding: 2rem 0;
+		height: 50vh;
+	}
+	/* .bio {
+		height: 60%;
+	}
+	.display_pix {
+		height: 22%;
+	} */
 	.skill {
 		/* width: 40%; */
 		margin: auto;

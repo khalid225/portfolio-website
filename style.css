@@ -17,6 +17,7 @@ body {
 	background-position: center;
 	background-repeat: no-repeat; */
 	color: rgb(240, 248, 255);
+	font-size: 16px;
 }
 
 header {
@@ -132,7 +133,7 @@ main {
 
 .bio {
 	width: 60%;
-	display: inline-flex;
+	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin-right: 1rem;
@@ -162,9 +163,7 @@ main {
 	padding: auto;
 	align-items: center;
 	justify-content: center;
-	/* flex-wrap: wrap; */
 	margin: auto;
-	gap: 0.5rem;
 }
 
 .skill {
@@ -279,6 +278,10 @@ footer {
 }
 
 @media (max-width: 700px) {
+	body {
+		font-size: 8px;
+	}
+
 	.dropdown_menu {
 		position: fixed;
 		background-color: rgba(255, 255, 255, 0.2);
@@ -298,8 +301,9 @@ footer {
 	}
 	.skill__list {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(4, 1fr);
 		gap: 1rem;
+		padding: 1em;
 	}
 	.skill {
 		/* width: 40%; */
@@ -309,10 +313,13 @@ footer {
 		position: relative;
 	}
 	.project_list {
-		display: flex;
+		/* display: flex;
 		justify-content: center;
-		flex-wrap: wrap;
-		width: 70%;
+		flex-wrap: wrap; */
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+		/* width: 70%; */
 		margin: auto;
 		position: relative;
 	}

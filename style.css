@@ -127,8 +127,7 @@ main {
 	padding: 1rem;
 	width: 100%;
 	position: relative;
-	top: 2.5rem;
-	height: 100vh;
+	top: 1.5rem;
 }
 
 .bio {
@@ -278,7 +277,7 @@ footer {
 	padding-bottom: 10px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 765px) {
 	body {
 		font-size: 8px;
 	}
@@ -302,7 +301,7 @@ footer {
 	}
 	.skill__list {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(3, 1fr);
 		gap: 1rem;
 		padding: 1em;
 	}
@@ -312,7 +311,6 @@ footer {
 		justify-content: center;
 		align-items: center;
 		padding: 2rem 0;
-		height: 50vh;
 	}
 	/* .bio {
 		height: 60%;
@@ -321,7 +319,7 @@ footer {
 		height: 22%;
 	} */
 	.skill {
-		/* width: 40%; */
+		min-width: 20%;
 		margin: auto;
 		display: flex;
 		justify-content: center;
